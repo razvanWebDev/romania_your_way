@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 :root {
-  --main-color: #176083;
-  --main-color-transparent: rgba(23, 96, 131, 0.95);
+  --main-color: #323249;
+  --main-color-transparent: rgba(50, 50, 73, 0.5);
   --secondary-color: #6791a5;
   --secondary-color-transparent: #146082;
   --white-color: #ffffff;
@@ -11,7 +11,7 @@
 
   --main-text-color: rgb(32, 32, 32);
   --light-text-color: #666666;
-  --link-color: #176083;
+  --link-color: #323249;
   --link-hover-color: rgb(32, 32, 32);
 
   --danger-color: #ec312b;
@@ -32,7 +32,7 @@ body {
   background-color: var(--white-color);
   color: var(--main-text-color);
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -61,18 +61,6 @@ a:hover {
 
 ul {
   padding-left: 5em;
-}
-
-button {
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
-button:hover {
-  opacity: 0.8;
-  transition: all 0.2s ease-in-out;
 }
 
 /* floating labels */
@@ -161,6 +149,20 @@ section {
   color: var(--main-text-color);
   opacity: 0.7;
 }
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.5em 2em;
+  background-color: var(--white-color);
+  border: 1px solid var(--main-color);
+  font-size: 1.8em;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.btn:hover {
+  opacity: 0.75;
+  transition: all 0.3s;
+}
 
 .error {
   color: var(--danger-color);
@@ -207,12 +209,12 @@ section {
 header {
   z-index: 10;
   width: 100%;
-  padding: 2em var(--sides-padding);
+  height: 6em;
+  padding: 1em var(--sides-padding);
   background-color: white;
-}
-
-.header-menu {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header.showNav {
@@ -230,16 +232,25 @@ header.hideNav {
 #logo-section {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #logo {
-  width: 8em;
+  height: 4em;
 }
 
 #logo-section h1 {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 500;
-  line-height: 1;
+  line-height: 0.9;
+  width: fit-content;
+  margin-left: 0.5em;
+}
+
+#logo-section h1 span {
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 .nav-links {
@@ -250,7 +261,8 @@ header.hideNav {
 }
 
 header .nav-links li {
-  margin: 0 1em;
+  position: relative;
+  margin: 0 0.7em;
   color: var(--main-text-color);
   cursor: pointer;
 }
@@ -263,6 +275,14 @@ header .nav-links li:first-child {
 header .nav-links li:last-child {
   margin-right: 0;
 }
+.nav-links-divider {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2em;
+  transform: translateY(-50%);
+}
+
 .current-page {
   border-bottom: 2px solid var(--main-color);
 }
@@ -427,36 +447,154 @@ footer a:visited {
 /*================ Home page======================== */
 .hero {
   width: 100%;
-  height: 75vh;
-  background: url("../img/hero.jpg") no-repeat center/cover;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.hero-btns {
+  /* 100vh - (header height - main carousel translateY) */
+  height: calc(100vh - 4em);
+  background: url("../img/hero.png") no-repeat center/cover;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.hero-btns button {
-  margin: 1em;
+.hero-slogan {
   color: var(--white-color);
-  border: 1px solid var(--white-color);
-  font-size: 1.2em;
+  width: 57em;
+  text-align: center;
+  text-shadow: 0px 0px 5px #000000;
 }
-.hero-btns button.call-to-action {
-  background-color: var(--white-color);
-  color: var(--main-color);
+.hero-slogan h2 {
+  font-size: 4.5em;
+  line-height: 1.17;
 }
-.hero-btns button.call-to-action:hover {
-  color: var(--white-color);
-  background-color: rgba(0, 0, 0, 0.4);
+.hero-slogan h3 {
+  font-size: 3.4em;
+  line-height: 1.16;
+}
+.hero-slogan p {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-top: 2em;
+  line-height: 1.16;
+  text-align: center;
 }
 
-#about-us p {
+.main-attraction {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding-top: 0;
+}
+.main-carousel {
+  width: calc(100% - 6em);
+  transform: translateY(-2em);
+  margin-bottom: 6em;
+}
+.main-carousel .main-carousel-cell {
+  position: relative;
+  width: 19em;
+  height: 27em;
+  cursor: pointer;
+  margin-right: 3em;
+  margin-bottom: 2em;
+}
+.main-carousel .main-carousel-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.main-carousel .main-carousel-cell .cell-description {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 15.4em;
+  height: 4em;
+  padding: 0.2em;
+  overflow: hidden;
+}
+.main-carousel .main-carousel-cell .cell-description p {
+  color: var(--main-text-color);
+  font-size: 1em;
+  margin-bottom: 0;
+  font-weight: 500;
   text-align: center;
-  line-height: 1.8;
-  margin-bottom: 1em;
+  line-height: 1.8em;
+}
+.flickity-prev-next-button {
+  border-radius: 0;
+  height: 4em;
+}
+/* no circle */
+.main-carousel .flickity-button {
+  background: transparent;
+}
+.flickity-button-icon {
+  fill: white;
+}
+.main-carousel .flickity-prev-next-button.previous {
+  left: -4em;
+}
+.main-carousel .flickity-prev-next-button.next {
+  right: -4em;
+}
+
+.main-attractions-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+.main-attraction .images-container {
+  position: relative;
+  width: 44em;
+  height: 38.5em;
+}
+.main-attraction .images-container img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+}
+.main-attraction .images-container img.middle {
+  width: 22.7em;
+  height: 24.3em;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.main-attraction .images-container img.top-right {
+  width: 29.4em;
+  height: 20.7em;
+  top: 0;
+  right: 0;
+}
+.main-attraction .images-container img.bottom-right {
+  width: 29.4em;
+  height: 17.85em;
+  bottom: 0;
+  right: 3.5em;
+}
+.main-attraction .description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-right: 6em;
+}
+
+.main-attraction .description h2 {
+  font-size: 2em;
+  line-height: 1.17;
+  margin-bottom: 2em;
+}
+
+.main-attraction .description h2 span {
+  font-size: 1.7em;
+}
+.main-attraction .description p {
+  font-size: 1.5em;
+  margin-bottom: 2em;
 }
 
 .contact-container {
@@ -600,6 +738,9 @@ footer a:visited {
     font-weight: 300;
     text-align: center;
   }
+  .nav-links-divider {
+    display: none;
+  }
 
   .hero {
     height: 45vh;
@@ -614,9 +755,6 @@ footer a:visited {
   header .nav-links li {
     color: var(--white-color);
     font-size: 1.2em;
-  }
-  .hero-btns button {
-    font-size: 0.9em;
   }
   .contact-container {
     flex-direction: column;

@@ -15,7 +15,7 @@ $website_url = "www.website-template.great-site.net";
   $server = 'localhost';
   $username = 'root';
   $password = '';
-  $dbname = 'new_template';    
+  $dbname = 'romania_your_way';    
 
   $connection = mysqli_connect($server, $username, $password, $dbname);
 

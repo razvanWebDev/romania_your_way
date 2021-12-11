@@ -177,6 +177,17 @@ window.onload = () => {
     currentYearSpan.innerHTML = getCurrentYear();
   }
 
+  // ===========CAROUSELS=============================
+  //minitialize main carousel
+  var flkty = new Flickity(".main-carousel", {
+    // options
+    cellAlign: "left",
+    lazyLoad: true,
+    wrapAround: true,
+    // contain: true,
+    pageDots: false,
+  });
+
   //=========================EVENT LISTENERS=====================
 
   // show nav on hamburger tap
