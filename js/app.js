@@ -178,9 +178,15 @@ window.onload = () => {
   }
 
   // ===========CAROUSELS=============================
-  //minitialize main carousel
+  //initialize main carousel
   var flkty = new Flickity(".main-carousel", {
-    // options
+    cellAlign: "left",
+    lazyLoad: true,
+    wrapAround: true,
+    // contain: true,
+    pageDots: false,
+  });
+  var flkty2 = new Flickity(".romanian-essentials-carousel", {
     cellAlign: "left",
     lazyLoad: true,
     wrapAround: true,

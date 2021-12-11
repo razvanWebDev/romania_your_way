@@ -42,5 +42,17 @@
         </div>
     </div>
 </section>
+<section class="romanian-essentials">
+    <h2 class="section-title">Romanian Essentials</h2>
+    <div class="romanian-essentials-carousel">
+        <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?>
+        <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?> 
+        <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?> 
+        <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?>
+        <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?> 
+        <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?> 
+    </div>
+
+</section>
 
 <?php include "PHP/footer.php"; ?>
