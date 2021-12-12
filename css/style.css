@@ -18,7 +18,7 @@
   --success-color: #0d9646;
 
   --sides-padding: 8vw;
-  --top-bottom-padding: 4em;
+  --top-bottom-padding: 6em;
 }
 
 * {
@@ -176,7 +176,7 @@ section {
   padding: 0.5em 2em;
   background-color: var(--white-color);
   border: 1px solid var(--main-color);
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: 600;
   color: var(--main-color);
 }
@@ -673,6 +673,90 @@ footer a:visited {
 }
 .romanian-essentials-carousel .flickity-button-icon {
   fill: var(--main-color);
+}
+
+.about-section {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 var(--sides-padding);
+  margin: var(--top-bottom-padding) 0;
+  width: 100%;
+  height: 35em;
+}
+.about-section .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-right: 6em;
+  width: 50%;
+  height: 100%;
+}
+.about-section .description h2 {
+  font-size: 3.4em;
+}
+.about-section .images-container {
+  min-width: 50%;
+  width: 50%;
+  height: 100%;
+}
+.about-section .images-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tailored-tours-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23em, 1fr));
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-gap: 3em 2em;
+  width: 100%;
+}
+.tailored-tours-card {
+  position: relative;
+  width: 100%;
+  height: 18em;
+}
+.tailored-tours-card img {
+  width: 100%;
+  height: 18em;
+  object-fit: cover;
+  object-position: center;
+}
+.tailored-tours-card .top-label {
+  width: 8.5em;
+  height: 1.45em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: #c4c4c4;
+  color: var(--white-color);
+  font-size: 1.4em;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.tailored-tours-card .card-description {
+  width: 100%;
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #696969bf;
+  color: var(--white-color);
+  font-size: 1.5em;
+  line-height: 3em;
+  overflow: hidden;
 }
 
 .contact-container {

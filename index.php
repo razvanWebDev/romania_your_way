@@ -52,7 +52,31 @@
         <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?> 
         <?php  include "PHP/romanian_essentials_carousel_cell.php"; ?> 
     </div>
-
+</section>
+<section class="about-section">
+    <div class="description">
+        <h2>Know Us Better</h2>
+        <p>
+            This is us. Since xyz, we dedicate our efforts to building the best Romanian travel experiences.
+            We are passionate about Romania and we want to show its beauty to the entire world 
+        </p>
+        <a href="#" class="btn">OUR TEAM</a>
+    </div>
+    <div class="images-container">
+        <img src="img/ui/danube.png" alt="explore" class="top-right">
+    </div>
+</section>
+<section class="tailored-section">
+    <h2 class="section-title">Our Tailored Tours Selection</h2>
+    <div class="tailored-tours-container">
+        <?php  include "PHP/tailored_tours_card.php"; ?>
+        <?php  include "PHP/tailored_tours_card.php"; ?>
+        <?php  include "PHP/tailored_tours_card.php"; ?>
+        <?php  include "PHP/tailored_tours_card.php"; ?>
+        <?php  include "PHP/tailored_tours_card.php"; ?>
+        <?php  include "PHP/tailored_tours_card.php"; ?>
+    </div>
+    
 </section>
 
 <?php include "PHP/footer.php"; ?>

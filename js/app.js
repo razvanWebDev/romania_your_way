@@ -186,6 +186,7 @@ window.onload = () => {
     // contain: true,
     pageDots: false,
   });
+  //initialize romanian essentials carousel
   var flkty2 = new Flickity(".romanian-essentials-carousel", {
     cellAlign: "left",
     lazyLoad: true,
