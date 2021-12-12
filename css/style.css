@@ -627,10 +627,10 @@ footer a:visited {
 
 .romanian-essentials-carousel-cell {
   position: relative;
-  width: 26em;
+  width: 27em;
   height: 34em;
   cursor: pointer;
-  margin-right: 3em;
+  margin-right: 5em;
   margin-bottom: 2em;
   text-align: center;
 }
